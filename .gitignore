@@ -35,4 +35,14 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-app-example
+# yarn
+.yarn/install-state.gz
+
+# corepack
+.yarn/install-state.gz
+
+# ios
+ios/
+
+# android
+android/
