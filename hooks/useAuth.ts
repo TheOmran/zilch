@@ -1,4 +1,5 @@
 import type { LoginInput } from '@/types/user'
+import * as Haptics from 'expo-haptics'
 import { create } from 'zustand'
 
 interface AuthState {
@@ -36,6 +37,7 @@ export const useAuth = create<AuthState>((set) => ({
     }
   },
   signOut: () => {
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success)
     set({
       isAuthenticated: false,
       user: null

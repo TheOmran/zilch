@@ -1,13 +1,23 @@
-# Welcome to your Expo app 👋
+# Zilch Demo App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a demo application created for an interview with Zilch, built using [Expo](https://expo.dev). The app demonstrates a simple banking interface with two main screens:
 
-## Get started
+- **Login Screen**: A mocked authentication screen that simulates user login
+- **Home Screen**: Displays user's card details and transaction history, fetched from a random API
+
+## Features
+
+- Animated header with card details
+- Transaction list with pull-to-refresh
+- Error handling and loading states
+- Haptic feedback
+
+## Getting Started
 
 1. Install dependencies
 
    ```bash
-   npm install
+   yarn install
    ```
 
 2. Start the app
@@ -16,35 +26,33 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Running the App
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+You can run the app on:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- iOS Simulator
+- Android Emulator 
+- Physical device using Expo Go
 
-## Get a fresh project
+The app will start on the login screen where you can fill any random email/password and tap the login button to access the home screen. On the home screen, you'll see:
 
-When you're ready, run:
+- A card component showing balance and card details
+- A scrollable list of transactions
+- Pull-to-refresh functionality to reload data
+- Animated header that responds to scroll position
 
-```bash
-npm run reset-project
-```
+## Technical Details
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Built with Expo and React Native
+- Uses React Query for data fetching
+- Implements React Native Reanimated for smooth animations
+- Styled with styled-components
+- Uses file-based routing
 
-## Learn more
+## API Integration
 
-To learn more about developing your project with Expo, look at the following resources:
+The app integrates with a random data API to simulate:
+- Fetching card details
+- Loading transaction history
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Note: Since this is a demo app, the data is randomly generated on each refresh.
